@@ -21,6 +21,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
                 intent.putExtra("data", "홍길동이 쇠도끼를 훔쳐간 범인이다.");
+
+                SimpleData simpleData = new SimpleData("홍길동", 20, "안녕, 난 홍길동이야.");
+                intent.putExtra("simpleData", simpleData);
+
+
+                //startActivity(intent);
                 startActivityForResult(intent, REQEUST_CODE_MENU);
             }
         });
