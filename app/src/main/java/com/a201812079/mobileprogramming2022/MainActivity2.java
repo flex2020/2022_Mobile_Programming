@@ -28,6 +28,14 @@ public class MainActivity2 extends AppCompatActivity {
         + " age: " + simpleData.age + " \ncomment: " + simpleData.comment);
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent();
+        intent.putExtra("name", "홍길동");
+        setResult(RESULT_OK, intent);
+    }
+
     public void showToast(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }

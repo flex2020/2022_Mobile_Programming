@@ -1,15 +1,23 @@
 package com.a201812079.mobileprogramming2022;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ComponentName;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    Button button1;
+    Button button1, button2, button3;
+    EditText editText;
     private final static int REQEUST_CODE_MENU = 101;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +38,39 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, REQEUST_CODE_MENU);
             }
         });
+        button2 = (Button) findViewById(R.id.button2);
+        editText = (EditText) findViewById(R.id.editTextTextPersonName);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String data = editText.getText().toString();
 
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(data));
+                startActivity(intent);
+            }
+        });
+
+        button3 = (Button) findViewById(R.id.button3);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                ComponentName componentName = new ComponentName("com.nhn.android.search", "com.nhn.android.search.MainActivity");
+                intent.setComponent(componentName);
+                startActivity(intent);
+            }
+        });
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == REQEUST_CODE_MENU) {
+            Toast.makeText(this, "onActivityResult 메소드 호출됨 : " + requestCode, Toast.LENGTH_SHORT).show();
+            if(resultCode == RESULT_OK) {
+                String name = data.getStringExtra("name");
+                Toast.makeText(this, "전달된 name: " + name, Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }
