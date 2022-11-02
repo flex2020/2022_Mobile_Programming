@@ -3,13 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/hosan/AndroidStudioProjects/MobileProgramming2022/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.191" />
-        <entry key="..\:/Users/hosan/AndroidStudioProjects/MobileProgramming2022/app/src/main/res/drawable/ic_launcher_background.xml" value="0.191" />
-        <entry key="..\:/Users/hosan/AndroidStudioProjects/MobileProgramming2022/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Users/hosan/AndroidStudioProjects/MobileProgramming2022/app/src/main/res/layout/activity_main2.xml" value="0.15" />
-        <entry key="..\:/Users/hosan/AndroidStudioProjects/MobileProgramming2022/app/src/main/res/layout/sub1.xml" value="0.14444444444444443" />
-        <entry key="..\:/Users/hosan/AndroidStudioProjects/MobileProgramming2022/app/src/main/res/layout/sub2.xml" value="0.14444444444444443" />
-        <entry key="..\:/Users/hosan/AndroidStudioProjects/MobileProgramming2022/app/src/main/res/layout/sub3.xml" value="0.14444444444444443" />
+        <entry key="..\:/Users/hosan/AndroidStudioProjects/MobileProgramming2022/app/src/main/res/layout-land/activiy_main.xml" value="0.30423280423280424" />
+        <entry key="..\:/Users/hosan/AndroidStudioProjects/MobileProgramming2022/app/src/main/res/layout/activity_main.xml" value="0.32382246376811596" />
+        <entry key="..\:/Users/hosan/AndroidStudioProjects/MobileProgramming2022/app/src/main/res/layout/activity_main2.xml" value="0.15534420289855072" />
       </map>
     </option>
   </component>
