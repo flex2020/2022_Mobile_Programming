@@ -7,6 +7,7 @@ import android.os.Bundle;
 public class MainActivity extends AppCompatActivity {
     FirstFragment firstFragment;
     SecondFragment secondFragment;
+    String str;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
